@@ -4,6 +4,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Markup;
 using Labtech.Utilidades;
+using Labtech.Janelas.Asfalto;
 using msg = System.Windows.Forms.MessageBox;
 using Stimulsoft;
 using System.IO;
@@ -80,7 +81,7 @@ namespace Labtech
                         ProjectVars.currentProjectFileName = item.Name;
                         string currentProjectFileNameWithoutXml = ProjectVars.currentProjectFileName.Replace(".xml", "");
                         txtCurrentProject.Text = currentProjectFileNameWithoutXml;
-
+                        enableMenus();
                     }
                 }
 
@@ -90,7 +91,29 @@ namespace Labtech
         // Habilita menu caso algum projeto esteja selecionado
         private void enableMenus()
         {
+            menuAsfalto.IsEnabled = true;
+            menuConcreto.IsEnabled = true;
+            menuSolos.IsEnabled = true;
+            menuObras.IsEnabled = true;
+        }
+        private void disableMenus()
+        {
+            menuAsfalto.IsEnabled = false;
+            menuConcreto.IsEnabled = false;
+            menuSolos.IsEnabled = false;
+            menuObras.IsEnabled = false;
+        }
 
+        private void MenuExtracaoComGranulometria_Click(object sender, RoutedEventArgs e)
+        {
+            ExtracaoBetumeGranulometria extr = new ExtracaoBetumeGranulometria();
+            extr.Show();
+        }
+
+        private void MenuObras_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroObras cadastro = new CadastroObras();
+            cadastro.Show();
         }
     }
 }

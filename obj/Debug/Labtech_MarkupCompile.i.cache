@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Maicon Rossini\Desktop\Labtech\obj\Debug\
+C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\
 Labtech
 none
 false
 DEBUG;TRACE
-C:\Users\Maicon Rossini\Desktop\Labtech\App.xaml
-21344033816
+C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\App.xaml
+42120486890
 
-10516286745
-38-626614494
-Janelas\CadastroProjeto.xaml;MainWindow.xaml;
+121265017684
+381422309442
+Janelas\Asfalto\ExtracaoBetumeGranulometria.xaml;Janelas\CadastroObras.xaml;Janelas\CadastroProjeto.xaml;MainWindow.xaml;
 
-False
+True
 

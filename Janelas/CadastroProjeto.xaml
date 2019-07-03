@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labtech.Janelas"
         mc:Ignorable="d"
-        Title="Cadastrar novo projeto" Height="423.499" Width="680.205" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Labtech;component/Arquivos/Icones/logo_principal.ico">
+        Title="Cadastrar novo projeto" Height="423.499" Width="681.966" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Labtech;component/Arquivos/Icones/logo_principal.ico">
     <Window.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="12"/>
@@ -17,7 +17,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="5 5 0 5">
+        <StackPanel Orientation="Vertical" Grid.Column="0" Margin="10 5 0 5">
             <TextBlock Margin="5 7 5 10">Projeto</TextBlock>
             <TextBox x:Name="txtProjeto" Margin="5 0 5 10" Height="25"></TextBox>
             <TextBlock Margin="5 0 5 10">Descrição</TextBlock>
@@ -27,7 +27,7 @@
             <TextBlock Margin="5 0 5 10">Cargo</TextBlock>
             <TextBox x:Name="txtCargo" Margin="5 0 5 10"></TextBox>
             <TextBlock Margin="5 0 5 10">Observações</TextBlock>
-            <TextBox x:Name="txtObs" Margin="5,0,0,10" Height="87" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtObs" Margin="5,0,0,10" Height="87" HorizontalAlignment="Left" VerticalAlignment="Top" Width="205" TextWrapping="Wrap"/>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Margin="5 5 0 5">
             <TextBlock Margin="5 7 5 10"><Run Text="Razão Social"/></TextBlock>
@@ -50,7 +50,7 @@
                     <Setter Property="Width" Value="120"/>
                 </Style>
             </StackPanel.Resources>
-            <TextBlock Margin="12 12 0 0"><Run Text="Logo da empresa (150x180)"/></TextBlock>
+            <TextBlock Margin="40,12,0,0"><Run Text="Logo da empresa (150x180)"/></TextBlock>
             <Border BorderBrush="DarkGray" BorderThickness="1" Height="150" Width="180" Margin="0 10 0 0">
                 <Image x:Name="imgLogo" RenderOptions.BitmapScalingMode="HighQuality"/>
             </Border>

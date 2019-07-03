@@ -20,6 +20,18 @@
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
+            <MenuItem Header="Obras" x:Name="menuObras" Click="MenuObras_Click" IsEnabled="False"/>
+            <MenuItem Header="Asfalto" Name="menuAsfalto" IsEnabled="False">
+                <MenuItem Header="C.B.U.Q">
+                    <MenuItem Header="Extração de betume com granulometria" Name="menuExtracaoComGranulometria" Click="MenuExtracaoComGranulometria_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Concreto" Name="menuConcreto" IsEnabled="False">
+
+            </MenuItem>
+            <MenuItem Header="Solos" Name="menuSolos" IsEnabled="False">
+
+            </MenuItem>
         </Menu>
 
         <StatusBar VerticalAlignment="Bottom" Height="25" BorderBrush="DarkGray" BorderThickness="0 1 0 0">
