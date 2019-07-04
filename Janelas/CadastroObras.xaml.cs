@@ -16,7 +16,7 @@ namespace Labtech.Janelas
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            txtProjeto.Text = ProjectVars.currentProjectFileName;
+            txtProjeto.Text = ProjectVars.currentProjectFileName.Replace(".xml","");
         }
     }
 }

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labtech.Janelas"
         mc:Ignorable="d"
-        Title="Cadastro de obras e trechos de serviço" Height="600" Width="800"
-        Loaded="Window_Loaded">
+        Title="Cadastro de obras e trechos de serviço" Height="600" Width="517"
+        Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="/Labtech;component/Arquivos/Icones/logo_principal.ico">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="15 5 15 0"/>
@@ -37,9 +37,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -50,88 +48,36 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
             <RowDefinition ></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="4" Orientation="Vertical">
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="4" Orientation="Vertical">
             <TextBlock Margin="15 10 15 0">Projeto atual</TextBlock>
             <TextBox x:Name="txtProjeto" IsEnabled="False" Background="LightGray"></TextBox>
             <TextBlock Text="Nome da obra"/>
             <TextBox></TextBox>
-            <TextBlock Text=""/>
+            <TextBlock  Text="Localização" />
             <TextBox></TextBox>
-            <TextBlock/>
+            <TextBlock Text="Responsável"/>
             <TextBox></TextBox>
-            <TextBlock/>
+            <TextBlock Text="Contrato"/>
             <TextBox></TextBox>
-            <TextBlock/>
-            <TextBox></TextBox>
-        </StackPanel>
-
-        <StackPanel Grid.Row="0" Grid.Column="4" Grid.RowSpan="7" Grid.ColumnSpan="4" Orientation="Vertical">
-            <TextBlock Margin="15 10 15 0">Projeto atual</TextBlock>
-            <TextBox></TextBox>
-            <TextBlock Text="Nome da obra"/>
-            <TextBox></TextBox>
-            <TextBlock Text=""/>
-            <TextBox></TextBox>
-            <TextBlock/>
-            <TextBox></TextBox>
-            <TextBlock/>
-            <TextBox></TextBox>
-            <TextBlock/>
+            <TextBlock Text="Descrição"/>
             <TextBox></TextBox>
         </StackPanel>
 
-        <Grid Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="6" Grid.RowSpan="6">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        <Grid Grid.Row="7" Grid.ColumnSpan="14" Grid.RowSpan="4" Margin="15 15 15 15">
+        <StackPanel Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Grid.ColumnSpan="4" Orientation="Vertical">
+            <TextBlock Text="Início previsto" Margin="15 10 15 0"></TextBlock>
+            <DatePicker Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
+            <TextBlock Text="Término previsto"/>
+            <DatePicker Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
+            <TextBlock Text="Observações"/>
+            <TextBox></TextBox>
+
+        </StackPanel>
+        <Grid Grid.Row="5" Grid.ColumnSpan="11" Grid.RowSpan="4" Margin="15 15 15 15">
             <DataGrid>
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeadersPresenter}">
@@ -143,18 +89,44 @@
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="1*" Header="Nº Trecho"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Trecho"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Ponto inicial"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Ponto final"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
+        <GroupBox Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" Grid.ColumnSpan="7" Header="Adicionar trecho" FontSize="14" Margin="15 -40 15 0">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MinWidth="280">
+                    <TextBlock Text="Trecho" MinWidth="120" Margin="10 0 10 1"/>
+                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                    <TextBlock Text="Ponto inicial" MinWidth="120" Margin="10 0 10 0"/>
+                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                    <TextBlock Text="Ponto final" MinWidth="120" Margin="10 0 10 0"/>
+                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                </StackPanel>
+            </StackPanel>
+
+        </GroupBox>
+        <StackPanel Grid.ColumnSpan="3" Grid.Column="8" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="115">
+            <Button Margin="10" Height="35">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Labtech;component/Arquivos/Icones/limparcampos.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    <TextBlock Text="Limpar" Margin="5"/>
+                </StackPanel>
+            </Button>
+            <Button Margin="10" Height="35">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Labtech;component/Arquivos/Icones/adicionar.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    <TextBlock Text="Trecho" Margin="5"/>
+                </StackPanel>
+            </Button>
+            <Button Margin="10" Height="35">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Labtech;component/Arquivos/Icones/salvararquivo.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    <TextBlock Text="Obra" Margin="5" Width="38"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
