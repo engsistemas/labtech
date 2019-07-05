@@ -79,6 +79,7 @@ namespace Labtech
                         ProjectVars.currentProjectFolderPath = fb.SelectedPath;
                         ProjectVars.currentProjectFilePath = item.FullName;
                         ProjectVars.currentProjectFileName = item.Name;
+                        ProjectVars.currentProjectDbPath = Path.Combine(fb.SelectedPath, "recursos", "dados", "lab.db");
                         string currentProjectFileNameWithoutXml = ProjectVars.currentProjectFileName.Replace(".xml", "");
                         txtCurrentProject.Text = currentProjectFileNameWithoutXml;
                         enableMenus();
@@ -95,6 +96,7 @@ namespace Labtech
             menuConcreto.IsEnabled = true;
             menuSolos.IsEnabled = true;
             menuObras.IsEnabled = true;
+            menuGerenciar.IsEnabled = true;
         }
         private void disableMenus()
         {
@@ -102,6 +104,8 @@ namespace Labtech
             menuConcreto.IsEnabled = false;
             menuSolos.IsEnabled = false;
             menuObras.IsEnabled = false;
+            menuGerenciar.IsEnabled = false;
+
         }
 
         private void MenuExtracaoComGranulometria_Click(object sender, RoutedEventArgs e)

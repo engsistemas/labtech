@@ -65,6 +65,9 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DatabaseTools">
+      <HintPath>..\databasetools\bin\Debug\netstandard2.0\DatabaseTools.dll</HintPath>
+    </Reference>
     <Reference Include="LibExcel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
       <HintPath>packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\LibExcel.dll</HintPath>
     </Reference>
@@ -156,6 +159,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Peneira.cs" />
+    <Compile Include="Utilidades\CRUD.cs" />
     <Compile Include="Janelas\Asfalto\ExtracaoBetumeGranulometria.xaml.cs">
       <DependentUpon>ExtracaoBetumeGranulometria.xaml</DependentUpon>
     </Compile>
@@ -165,6 +170,7 @@
     <Compile Include="Janelas\CadastroProjeto.xaml.cs">
       <DependentUpon>CadastroProjeto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Trecho.cs" />
     <Compile Include="Utilidades\DialogsHelper.cs" />
     <Compile Include="Utilidades\ImageProcessing.cs" />
     <Compile Include="Utilidades\ProjectVars.cs" />
@@ -192,6 +198,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\LabControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -391,7 +401,6 @@
   <ItemGroup>
     <Folder Include="Janelas\Concreto\" />
     <Folder Include="Janelas\Solos\" />
-    <Folder Include="Styles\" />
     <Folder Include="Usercontrols\" />
   </ItemGroup>
   <ItemGroup>

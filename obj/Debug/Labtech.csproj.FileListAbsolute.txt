@@ -400,3 +400,6 @@ C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\Janelas\Asfalto\Extraca
 C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\Janelas\Asfalto\ExtracaoBetumeGranulometria.baml
 C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\Janelas\CadastroObras.g.cs
 C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\Janelas\CadastroObras.baml
+C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\bin\Debug\DatabaseTools.dll
+C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\bin\Debug\DatabaseTools.pdb
+C:\Users\Maicon Rossini\Desktop\GITHUB\labtech\obj\Debug\Styles\LabControls.baml

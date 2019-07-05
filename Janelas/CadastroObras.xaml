@@ -57,28 +57,28 @@
             <TextBlock Margin="15 10 15 0">Projeto atual</TextBlock>
             <TextBox x:Name="txtProjeto" IsEnabled="False" Background="LightGray"></TextBox>
             <TextBlock Text="Nome da obra"/>
-            <TextBox></TextBox>
+            <TextBox x:Name="txtObra"></TextBox>
             <TextBlock  Text="Localização" />
-            <TextBox></TextBox>
+            <TextBox x:Name="txtLoca"></TextBox>
             <TextBlock Text="Responsável"/>
-            <TextBox></TextBox>
+            <TextBox x:Name="txtResp"></TextBox>
             <TextBlock Text="Contrato"/>
-            <TextBox></TextBox>
+            <TextBox x:Name="txtContrato"></TextBox>
             <TextBlock Text="Descrição"/>
-            <TextBox></TextBox>
+            <TextBox x:Name="txtDesc"></TextBox>
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="4" Grid.RowSpan="3" Grid.ColumnSpan="4" Orientation="Vertical">
             <TextBlock Text="Início previsto" Margin="15 10 15 0"></TextBlock>
-            <DatePicker Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
+            <DatePicker Name="dateInicio" Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
             <TextBlock Text="Término previsto"/>
-            <DatePicker Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
+            <DatePicker Name="dateTermino" Margin="15 5 15 0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></DatePicker>
             <TextBlock Text="Observações"/>
-            <TextBox></TextBox>
+            <TextBox x:Name="txtObs"></TextBox>
 
         </StackPanel>
-        <Grid Grid.Row="5" Grid.ColumnSpan="11" Grid.RowSpan="4" Margin="15 15 15 15">
-            <DataGrid>
+        <Grid Grid.Row="5" Grid.ColumnSpan="11" Grid.RowSpan="4" Margin="15 15 15 15" >
+            <DataGrid x:Name="gridTrecho" AutoGenerateColumns="False">
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeadersPresenter}">
                         <Setter Property="Height" Value="27"/>
@@ -87,11 +87,14 @@
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="HorizontalContentAlignment" Value="Center"/>
                     </Style>
+                    <Style TargetType="{x:Type DataGridCellsPresenter}">
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="1*" Header="Trecho"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*" Header="Ponto inicial"></DataGridTextColumn>
-                    <DataGridTextColumn Width="1*" Header="Ponto final"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Trecho" Binding="{Binding Path=NomeTrecho}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Ponto inicial" Binding="{Binding Path=PontoInicial}"></DataGridTextColumn>
+                    <DataGridTextColumn Width="1*" Header="Ponto final" Binding="{Binding Path=PontoFinal}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -99,29 +102,29 @@
             <StackPanel Orientation="Horizontal">
                 <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MinWidth="280">
                     <TextBlock Text="Trecho" MinWidth="120" Margin="10 0 10 1"/>
-                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                    <TextBox x:Name="txtTrecho" MinWidth="150" Margin="10 0 10 1"></TextBox>
                     <TextBlock Text="Ponto inicial" MinWidth="120" Margin="10 0 10 0"/>
-                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                    <TextBox x:Name="txtPontoIni" MinWidth="150" Margin="10 0 10 1"></TextBox>
                     <TextBlock Text="Ponto final" MinWidth="120" Margin="10 0 10 0"/>
-                    <TextBox MinWidth="150" Margin="10 0 10 1"></TextBox>
+                    <TextBox x:Name="txtPontoFin" MinWidth="150" Margin="10 0 10 1"></TextBox>
                 </StackPanel>
             </StackPanel>
 
         </GroupBox>
         <StackPanel Grid.ColumnSpan="3" Grid.Column="8" HorizontalAlignment="Left" Height="164" Margin="10,10,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="115">
-            <Button Margin="10" Height="35">
+            <Button x:Name="btnLimpar" Margin="10" Height="35">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Labtech;component/Arquivos/Icones/limparcampos.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
                     <TextBlock Text="Limpar" Margin="5"/>
                 </StackPanel>
             </Button>
-            <Button Margin="10" Height="35">
+            <Button x:Name="btnAddTrecho" Margin="10" Height="35" Click="BtnAddTrecho_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Labtech;component/Arquivos/Icones/adicionar.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
                     <TextBlock Text="Trecho" Margin="5"/>
                 </StackPanel>
             </Button>
-            <Button Margin="10" Height="35">
+            <Button x:Name="btnSaveObra" Margin="10" Height="35" Click="BtnSaveObra_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Labtech;component/Arquivos/Icones/salvararquivo.png" Height="20" Width="20" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
                     <TextBlock Text="Obra" Margin="5" Width="38"/>

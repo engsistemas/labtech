@@ -9,5 +9,6 @@ namespace Labtech.Utilidades
         public static string currentProjectFileName;
         public static string currentProjectFilePath;
         public static string currentProjectFolderPath;
+        public static string currentProjectDbPath;
     }
 }

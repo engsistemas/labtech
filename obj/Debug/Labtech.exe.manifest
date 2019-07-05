@@ -54,14 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labtech.exe" size="11600896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DatabaseTools.dll" size="5632">
+      <assemblyIdentity name="DatabaseTools" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pAPGqCYddTOxMEtpJCaVhxrE2DWpd5ouPPX/aoPawjc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labtech.exe" size="11618304">
       <assemblyIdentity name="Labtech" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vzTauVDoAKn+/gls+DYnNDRbIMVeEr4BokwiBCJH1Pk=</dsig:DigestValue>
+        <dsig:DigestValue>hy4QJZy7PBIaJDKx4HUIZWz3SPG2cIHMJ44HF/7RcuU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

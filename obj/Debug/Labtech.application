@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Labtech.exe.manifest" size="31503">
+    <dependentAssembly dependencyType="install" codebase="Labtech.exe.manifest" size="32146">
       <assemblyIdentity name="Labtech.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qtvZd7wUFmmSCJyVYes7hH+SfkXeWlJ/2sqMpVdHEfA=</dsig:DigestValue>
+        <dsig:DigestValue>HUW7xr2Jq4FZGIQxfEItoSMWFy3gkwykgrJcpP3e48A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -6,5 +6,103 @@
         xmlns:local="clr-namespace:Labtech.Janelas.Asfalto"
         mc:Ignorable="d"
         Title="Extração de betume com granulometria" Height="768" Width="1366" WindowStartupLocation="CenterScreen" WindowState="Maximized">
-    <Grid/>
+    <Window.Resources>
+        <ResourceDictionary Source="/Styles/LabControls.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid CanUserResizeColumns="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" x:Name="dgridGranulometria" Grid.Row="5" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="4" Style="{StaticResource LabDataGrid}" Margin="10 -15 10 10">
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Grid Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Width="1*" Header="MALHA (Nº)" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=NumeroMalha}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="LightGray"/>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True"  Width="1*" Header="MALHA (mm)" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=AberturaMalha}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="LightGray"/>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="False" Width="1*" Header="PESO RETIDO (g)" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=PesoRetidoG}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Width="1*" Header="PESO RETIDO (%)" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=PesoRetidoPrct}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="LightGray"/>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Width="1*" Header="PESO RETIDO AC. (%)" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=PesoRetidoPrctAc}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="LightGray"/>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Width="1*" Header="% PASSANDO" HeaderStyle="{StaticResource WrappedColumnHeaderStyle}" Binding="{Binding Path=PorcPassando}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.Background" Value="LightGray"/>
+                            <Setter Property="TextBlock.FontSize" Value="14"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </Window>
