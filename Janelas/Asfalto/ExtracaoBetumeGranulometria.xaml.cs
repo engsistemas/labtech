@@ -57,5 +57,13 @@ namespace Labtech.Janelas.Asfalto
             peneiras.Add(Peneira00p075mm);
 
         }
+
+        private void ApagaPesos_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in peneiras)
+            {
+                item.PesoRetidoG = 0;
+            }
+        }
     }
 }

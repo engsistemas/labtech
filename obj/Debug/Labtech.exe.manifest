@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labtech.exe" size="11618304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Labtech.exe" size="11618816">
       <assemblyIdentity name="Labtech" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hy4QJZy7PBIaJDKx4HUIZWz3SPG2cIHMJ44HF/7RcuU=</dsig:DigestValue>
+        <dsig:DigestValue>GOLTopZh1gNF2UMFC7ZbKaE2xCM6CCSY5lI49WY9n0g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

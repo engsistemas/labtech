@@ -18,7 +18,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition MinHeight="50" Height="60"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -34,7 +34,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DataGrid CanUserResizeColumns="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" x:Name="dgridGranulometria" Grid.Row="5" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="4" Style="{StaticResource LabDataGrid}" Margin="10 -15 10 10">
+        <DataGrid CanUserResizeColumns="True" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False" x:Name="dgridGranulometria" Grid.Row="4" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="4" Style="{StaticResource LabDataGrid}" Margin="10 -15 10 10">
             <DataGrid.CellStyle>
                 <Style TargetType="{x:Type DataGridCell}">
                     <Setter Property="Template">
@@ -104,5 +104,8 @@
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="4" Orientation="Horizontal" Height="30" Margin="30 0 30 5">
+            <Button x:Name="apagaPesos" Click="ApagaPesos_Click" Padding="5">Apagar pesos retidos</Button>
+        </StackPanel>
     </Grid>
 </Window>
